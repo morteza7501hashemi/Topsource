@@ -1,0 +1,88 @@
+.box {
+    width: calc(25% - 3rem);
+    background: $color-white;
+    @include border-top-radius;
+    box-shadow: 0 1rem 2rem rgba($color-black,.2);
+    transition: all .3s;
+
+    @include respond(tab-land) {
+        width: calc(30% - 3rem);
+    }
+
+    @media only screen and (max-width: 65em) { 
+        width: calc(33% - 3rem);
+    }
+
+    @include respond(tab-port) {
+        width: calc(36% - 4rem);
+    }
+
+    @media only screen and (max-width: 47em) { 
+        width: calc(47% - 3rem);
+    }
+
+    @include respond(phone) {
+        width: 35rem;
+    }
+
+    &:hover {
+        transform: translateY(-1rem);
+    }
+
+    &__img {
+        width: 100%;
+        height: 16.5rem;
+        @include border-top-radius;
+    }
+    
+    &__group {
+        padding: 1rem 1rem .5rem;
+        display: flex;
+        flex-flow: wrap row;
+        justify-content: space-between;
+        gap: 1rem 0;
+
+        &:last-of-type {
+            background: darken($color-grey-light,2%);
+        }
+    }
+
+    &__description {
+        color: inherit;
+        text-align: right;
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+        transition: color .3s;
+
+        &--profile:hover {
+            color: $color-tertiary;
+        }
+
+        &--comment {
+            color: $color-primary;
+        }
+
+        // &--time {
+        //     color: $color-tertiary;
+        // }
+
+        &--price {
+            color: $color-tertiary;
+        }
+    }
+
+    &__icon {
+        &--profile {
+            background: url("../icon/profile.svg") no-repeat center;
+        }
+
+        &--comment {
+            background: url("../icon/comment.svg") no-repeat center;
+        }
+
+        &--time {
+            background: url("../icon/time.svg") no-repeat center;
+        }
+    }
+}

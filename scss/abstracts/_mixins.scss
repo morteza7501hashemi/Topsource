@@ -1,0 +1,30 @@
+@mixin container-style {
+    max-width: $max-width;
+    text-align: center;
+    margin: 0 auto;
+    padding: 2rem;
+    display: flex;
+    flex-flow: wrap row;
+    justify-content: center;
+    gap: 3rem;
+}
+
+@mixin border-top-radius {
+    border-top-right-radius: $border-radius;
+    border-top-left-radius: $border-radius;
+}
+
+@mixin respond($breakpoint) {
+    @if $breakpoint == phone {
+        @media only screen and (max-width: 37.5em) { @content }; // width <= 600px
+    }
+    @if $breakpoint == tab-port {
+        @media only screen and (max-width: 56.25em) { @content }; // width <= 900px
+    }
+    @if $breakpoint == tab-land {
+        @media only screen and (max-width: 75em) { @content }; // width <= 1200px
+    }
+    @if $breakpoint == big-desktop {
+        @media only screen and (min-width: 112.5em) { @content }; // width => 1800px
+    }
+}

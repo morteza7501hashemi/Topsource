@@ -1,0 +1,25 @@
+.about-box {
+    width: calc(30% - 3rem);
+    display: flex;
+    flex-flow: wrap column;
+    align-items: center;
+
+    @include respond(tab-land) {
+        width: calc(31% - 3rem);
+    }
+
+    @include respond(tab-port) {
+        width: calc(40% - 4rem);
+    }
+
+    @include respond(phone) {
+        width: 38rem;
+    }
+    
+    &__img {
+        width: 10rem;
+        height: 10rem;
+        border-radius: 50%;
+        display: block;
+    }
+}

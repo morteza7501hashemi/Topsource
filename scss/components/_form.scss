@@ -1,0 +1,58 @@
+.form {
+    width: 100%;
+    display: flex;
+    flex-flow: wrap column;
+    
+    &__group {
+        margin-bottom: 2rem;
+        position: relative;
+    }
+
+    &__input, 
+    &__text-area {
+        width: 100%;
+        color: $color-grey-dark;
+        font: $font;
+        background: $color-white;
+        padding: .5rem 1rem;
+        border: 2px $color-primary solid;
+        border-radius: $border-radius;
+        transition: all .2s;
+
+        &::placeholder {
+            color: $color-grey-dark;
+            font: inherit;
+        }
+
+        &:focus {
+            border-color: $color-primary-light;
+        }
+
+        &:valid {
+            border-color: $color-tertiary;
+        }
+    }
+
+    &__text-area {
+        height: 27rem;
+        resize: none;
+    }
+
+    &__icon {
+        position: absolute;
+        top: 26%;
+        left: 3%;
+
+        &--user {
+            background: url(../icon/user.svg) no-repeat center;
+        }
+
+        &--email {
+            background: url(../icon/email.svg) no-repeat center;
+        }
+
+        &--password {
+            background: url(../icon/password.svg) no-repeat center;
+        }
+    }
+}

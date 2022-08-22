@@ -1,0 +1,16 @@
+.spinner-border {
+    margin-bottom: 2rem;
+    position: relative;
+
+    &:before {
+        content: "";
+        border: 6px solid transparent;
+        border-top-color: $color-primary;
+        border-bottom-color: $color-primary;
+        border-radius: 50%;
+        position: absolute;
+        inset: -1.5rem;
+        animation: spin 3s linear infinite;
+        z-index: 1;
+    }
+}

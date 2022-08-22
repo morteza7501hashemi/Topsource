@@ -1,0 +1,53 @@
+.search {
+    position: relative;
+
+    @include respond(tab-land) {
+        width: 20rem;
+    }
+
+    @include respond(tab-port) {
+        width: 25rem;
+    }
+
+    @include respond(phone) {
+        width: 21rem;
+    }
+
+    &__input {
+        width: 100%;
+        color: $color-grey-dark;
+        font: $font;
+        font-weight: 600;
+        background: $color-white;
+        padding: .5rem 1.5rem;
+        border-radius: 2rem;
+
+        &::placeholder {
+            color: $color-grey-dark;
+            font-family: inherit;
+        }
+    }
+
+    &__icon {
+        width: 4.5rem;
+        height: 4.5rem;
+        background: url(../icon/search.svg) no-repeat;
+        cursor: pointer;
+        transform: scale(.6);
+        position: absolute;
+        top: -10%;
+        left: 1%;
+
+        @include respond(tab-port) {
+            top: -5%;
+        }
+
+        @include respond(phone) {
+            top: -7%;
+        }
+    } 
+
+    &__btn {
+        display: none;
+    }
+}

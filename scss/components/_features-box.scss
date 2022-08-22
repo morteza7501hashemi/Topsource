@@ -1,0 +1,24 @@
+.features-box {
+    width: calc(30% - 3rem);
+    display: flex;
+    flex-flow: wrap column;
+    align-items: center;
+
+    @include respond(tab-land) {
+        width: calc(33% - 3rem);
+    }
+
+    @include respond(tab-port) {
+        width: calc(43% - 3rem);
+    }
+
+    @include respond(phone) {
+        width: calc(38rem - 3rem);
+    }
+
+    &__img {
+        height: 10rem;
+        margin-bottom: 1rem;
+        border-radius: 10rem;
+    }
+}

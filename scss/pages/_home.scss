@@ -1,0 +1,66 @@
+.features {
+    background: $color-white;
+    padding-top: $padding-top-small;
+
+    &__container {
+        @include container-style;
+    }
+}
+
+.courses {
+    text-align: center;
+    background: $color-grey-light;
+    padding-top: $padding-top-small;
+
+    &__container {
+        @include container-style;
+
+        @include respond(tab-port) {
+            gap: 3rem 4rem;
+        }
+    } 
+}
+
+.articles {
+    text-align: center;
+    background: $color-grey-dark;
+    padding-top: $padding-top-small;
+
+    &__container {
+        @include container-style;
+    }
+}
+
+.about {
+    background: $color-white;
+    padding-top: $padding-top-small;
+
+    &__container {
+        @include container-style;
+
+        @include respond(tab-port) {
+            gap: 3rem 4rem;
+        }
+    }
+}
+
+.contactUs {
+    background: $color-grey-light;
+    padding-top: $padding-top-small;
+
+    &__container {
+        max-width: 50rem;
+        text-align: center;
+        margin: 0 auto; 
+        padding: 2rem;
+        display: flex;
+        flex-flow: wrap column;
+        align-items: center;
+        gap: 2rem 0;
+
+        @include respond(tab-port) {
+            gap: 4rem 0;
+        }
+    }
+}
+

@@ -1,0 +1,16 @@
+.header {
+    height: 95vh;
+    background: url(../img/background.jpg) no-repeat;
+    background-size: cover;
+    margin-top: 6.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__text-box {
+        transform: translateY(-5rem);
+    }
+}
+
+
+

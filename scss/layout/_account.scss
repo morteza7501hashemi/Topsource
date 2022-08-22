@@ -1,0 +1,51 @@
+.account {
+    max-width: 44rem;
+    text-align: center;
+    background: url(../img/form-background.jpg);
+    background-size: cover;
+    margin: 5rem auto; 
+    padding: 2rem;
+    border-radius: 5px;
+    box-shadow: 0 1rem 2rem rgba($color-black,.2);
+
+    .heading-secondary {
+        margin-bottom: 0;
+    }
+
+    .heading-tertiary {
+        margin-bottom: 2.5rem;
+    }
+
+    &__link-box {
+        text-align: right;
+        margin-top: 3rem;
+    }
+    
+    &__link {
+        width: max-content;
+        color: $color-primary;
+        font-size: 1.7rem;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+        transition: color .3s;
+    
+        &:hover {
+            color: $color-grey;
+            filter: invert(50%) sepia(4%) saturate(92%) hue-rotate(314deg) brightness(91%) contrast(88%);
+        }
+    
+        &--icon-user {
+            background: url(../icon/user-2.svg) no-repeat center;
+        }
+    
+        &--icon-user-plus {
+            background: url(../icon/user-plus.svg) no-repeat center;
+        }
+    
+        &--icon-password {
+            background: url(../icon/password-2.svg) no-repeat center;
+        }
+    }
+}

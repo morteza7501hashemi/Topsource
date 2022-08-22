@@ -1,0 +1,87 @@
+.socialMedia {
+    display: flex;
+    gap: 2rem;
+    transform: translateY(-1rem);
+    
+    &__icon--link {
+        width: 5rem;
+        height: 5rem;
+        color: $color-white;
+        background: $color-grey-dark-2;
+        outline: 2px solid transparent;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all .25s;
+
+        &:hover {
+            outline-offset: 4px;
+        }
+
+        &-twitter {
+            background: $color-tertiary;
+
+            &:hover {
+                background: #1da1f2;
+                outline-color: #1da1f2;
+            }
+        }
+
+        &-youtube {
+            background: $color-primary;
+
+            &:hover {
+                background: #fd5949;
+                outline-color: #fd5949;
+            }
+        }
+
+        &-telegram {
+            background: $color-secondary;
+
+            &:hover {
+                background: #229ed9;
+                outline-color: #229ed9;
+            }
+        }
+
+        &-instagram {
+            background: $color-grey-dark;
+
+            &:hover {
+                background:
+                radial-gradient(circle at 30% 107%,
+                #fdf497 0%, #fdf497 5%,
+                #fd5949 45%, #d6249f 60%,
+                #285aeb 90%);
+                outline-color: #a02d76;
+            }
+        }
+    }
+
+    &__icon--link:hover &__icon {
+        animation: shake .25s;
+    }
+
+    &__icon {
+        width: 3rem;
+        height: 3rem;
+
+        &-twitter {
+            background: url(../icon/twitter.svg) no-repeat center;
+        }
+
+        &-youtube {
+            background: url(../icon/youtube.svg) no-repeat center;
+        }
+
+        &-telegram {
+            background: url(../icon/telegram.svg) no-repeat center;
+        }
+
+        &-instagram {
+            background: url(../icon/instagram.svg) no-repeat center;
+        }
+    }
+}

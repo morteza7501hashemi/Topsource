@@ -1,0 +1,54 @@
+.menu {
+    display: none;
+
+    @include respond(tab-port) {
+        width: 40rem;
+        height: 100vh;
+        text-align: center;
+        background: $color-grey-dark-2;
+        padding: 2rem 0;
+        visibility: hidden;
+        display: block;
+        position: absolute;
+        top: 0;
+        right: -40rem;
+        transition: all .6s;
+        z-index: 200;        
+    }
+    
+    @include respond(phone) {
+        width: 32rem;
+    }
+
+    &__heading-box {
+        margin: 0 2rem;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    &__heading {
+        color: $color-white;
+        font-size: 3rem;
+        font-weight: 600;
+    }
+
+    &__logo-box {
+        width: 5rem;
+        height: 5rem;
+    }
+
+    &__logo {
+        height: 5rem;
+        transition: filter .5s;
+    }
+
+    &__list {
+        text-align: right;
+        margin:4rem;
+        display: flex;
+        flex-flow: wrap column;
+        gap: 3rem;
+    }
+}

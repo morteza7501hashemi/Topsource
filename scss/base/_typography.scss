@@ -1,0 +1,72 @@
+body {
+   color: $color-grey;
+   font: $font;
+   background: $color-white;
+}
+
+@font-face {
+   font-family: "IranSans";
+   src: url("../font/Regular.eot");
+   src: url("../font/Regular.eot?#iefix") format("embedded-opentype"),
+   url("../font/Regular.woff2") format("woff2"),
+   url("../font/Regular.woff") format("woff"),
+   url("../font/Regular.ttf") format("truetype");
+}
+
+.heading-primary {
+   color: $color-white;
+   text-align: center;
+   margin: 0 2rem;
+
+   &--main {
+      font-size: 3.5rem;
+      font-weight: 600;
+      word-spacing: 2px;
+      display: block;
+
+      @include respond(phone) {
+         font-size: 3rem;
+         word-spacing: 1px;
+      }
+   }
+
+   &--sub {
+      font-size: 2.5rem;
+      font-weight: 500;
+      word-spacing: 1px;
+      display: block;
+
+      @include respond(phone) {
+         font-size: 2rem;
+      }
+   }
+}
+
+.heading-secondary {
+   color: $color-primary;
+   font-size: 2.5rem;
+   font-weight: 600;
+   text-align: center;
+   margin: 0 2rem 1rem;
+}
+
+.heading-tertiary {
+   color: $color-secondary;
+   font-size: 1.8rem;
+   font-weight: 600;
+   transition: color .3s;
+
+   &:any-link:hover {
+      color: $color-primary;
+   }
+}
+
+.paragraph {
+   color: $color-grey;
+   font-size: $default-font-size;
+}
+
+.icon {
+   width: 2rem;
+   height: 2rem;
+}
